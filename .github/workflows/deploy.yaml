@@ -1,4 +1,4 @@
-name: Deploy MKDocs
+name: Deploy MkDocs
 
 on:
   push:
@@ -16,36 +16,41 @@ concurrency:
 
 jobs:
 
-build:
-  runs-on: ubuntu-latest
+  build:
 
-  steps:
-  - uses: actions/checkout@v4
-  - uses: actions/setup-python@v5
-    with:
-      python-version: '3.x'
+    runs-on: ubuntu-latest
 
-  - run: pip install requirements.txt
+    steps:
 
-  - run: mkdocs build
+      - uses: actions/checkout@v4
 
-  - uses: actions/configure-pages-artifact@v3
-    with:
-      path: site
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
-deploy:
-  needs: build
+      - run: pip install -r requirements.txt
 
-  runs-on: ubuntu-latest
+      - run: mkdocs build
 
-  environment:
-    name: github-pages
-    url: ${{ steps.deployment.outputs.page_url }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
 
-  permissions:
-    pages: write
-    id-token: write
+  deploy:
 
-  steps:
-  - id: deployment
-    uses: actions/deploy-pages@v4
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
