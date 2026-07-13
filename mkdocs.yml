@@ -21,6 +21,9 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+plugins:
+- awesome-pages
+
 extra_javascript:
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
@@ -37,31 +40,8 @@ exclude_docs: |
   - .gitignore
   - .gitattributes
   - LICENSE
-  
-nav:
-  - Home: index.md
-  - Calculus 3:
+  - .venv
+  - .github
 
-    - Chapter 13: 
-      - Arc Length: calc3/Chapter 13/13.3 Arc Length and Curvature.md
-      - Motion in Space: calc3/Chapter 13/13.4 Motion in Space.md
-    
-    - Chapter 14:
-      - Functions of Several Variables: calc3/Chapter 14/14.1 Functions of Several Variables.md
-      - Limits and Continuity: calc3/Chapter 14/14.2 Limits and Continuity.md
-      - Partial Derivatives: calc3/Chapter 14/14.3 PDES.md
-      - Tan Planes and Linear Approximations: calc3/Chapter 14/14.4 Tan Planes and Lin Approx.md
-      - Chain Rule: calc3/Chapter 14/14.5 Chain Rule.md
-      - Directional Derivatives and Gradient Vectors: calc3/Chapter 14/14.6 Direction Deriv and Grad Vector.md
-      - Maxima and Minima: calc3/Chapter 14/14.7 Max and Min Value.md
-      - Lagrange Multipliers: calc3/Chapter 14/14.8 Lagrange Multipliers.md
-    
-    - Chapter 15:
-      - Double Integrals over Rectangles: calc3/Chapter 15/15.1 Double Integrals over Rectangles.md
-      - Double Integrals over General Regions: calc3/Chapter 15/15.2 Double Integrals over General Regions.md
-      - Double Integrals in Polar Coordinates: calc3/Chapter 15/15.3 Double Integrals in Polar Coords.md
-      - Applications of Double Integrals: calc3/Chapter 15/15.4 Applications of Double Integrals.md
-      - Surface Area: calc3/Chapter 15/15.5 Surface Area.md
-      - Triple Integrals: calc3/Chapter 15/15.6 Triple Integrals.md
 
 
