@@ -23,6 +23,7 @@ markdown_extensions:
 
 plugins:
 - awesome-pages
+- search
 
 extra_javascript:
   - javascripts/katex.js
