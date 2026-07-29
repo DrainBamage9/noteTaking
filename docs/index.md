@@ -1,1 +1,1 @@
-Welcome! 
+Welcome! These notes are a collection of notes that I have personally taken. I feel that academia and text books focuses heavily on fancy words or overly verbose explainations without enough simplicity, thus I have commited these notes to the public in the hope that it will help someone.  
