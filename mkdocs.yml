@@ -20,6 +20,7 @@ docs_dir: docs
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
 
 plugins:
 - awesome-pages
